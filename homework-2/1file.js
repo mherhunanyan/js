@@ -1,15 +1,14 @@
 // Գրել ֆունկցիա, որը կստուգի, արդյոք տրված թիվը Palindrome է, թե ոչ:
 
-function foo(num) {
-    let compare = num;
+function isPalindrome(num) {
     let res = 0;
-    while (num != 0) {
-        res = res * 10 + num % 10;
-        num = Math.floor(num / 10); 
+    let chlp = num;
+    while (chlp !== 0) {
+        res = res * 10 + chlp % 10;
+        chlp = Math.floor((chlp / 10));
     }
-    if (res === compare) {
-        return true;
-    }
-    return false;
+    return num === res;
 }
-console.log(foo(121));
+
+console.log(isPalindrome(11211));
+
